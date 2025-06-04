@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قائمة الارسال</title>
+  <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+background: white;
+color: black;
+text-align: center;
+text-decoration: none;
+  overflow: hidden;
+}
+h3{
+  position: absolute;
+  left: 10px;
+  cursor:default;
+}
+.contact-wrapper{
+  position: relative;
+top: 1.3rem;
+}
+.contact-form{
+position: relative;
+top: 7rem;
+}
+/**/
+
+
+ input{
+  border: solid 2px black;
+border-radius: 30px;
+text-align: center;
+transition: .5s;
+}
+input:hover{
+scale: 1.2;
+transition: .5s;
+}
+
+
+.line{position: absolute;
+  background: black;
+  height: 100vh;
+  width: 5px;
+  right: 70%;
+ z-index: 1212;
+ overflow:hidden;
+
+}
+
+#name{
+  transition: .5s;
+  position: absolute;
+width: 18rem;
+right: 25rem;
+height: 3rem;
+
+}
+#phone{  position: absolute;
+right: 25rem;
+width: 18rem;
+height: 2rem;
+top: 4rem;
+transition: .5s;
+}
+
+#selectedProduct{ 
+
+  position: absolute;
+left: 8rem;
+top: 4.3rem;
+width: 12rem;
+border: none;
+height: -3rem;
+background-image: linear-gradient(to top, rgb(255, 255, 255),rgb(255, 255, 255));
+outline: none;
+
+transition: .5s;}
+#total{ position: absolute;
+  transition: .5s;
+left: 6.5rem;
+top: 15rem;
+width: 15rem;
+height: 3rem;
+border: none;
+outline: none;
+cursor:unset;
+text-align:unset;
+}
+#getLocationiq{
+  background-image: linear-gradient(to left, rgb(31, 84, 209),black);
+transition: .5s;
+   position: absolute;
+right: 24.7rem;
+top:-5.4rem;
+width: 18rem;
+border: none;
+height: 3rem;
+border-radius: 30px;
+cursor: pointxer;
+color: aliceblue;
+}
+#getLocationiq:hover{scale: 1.2;}
+#location
+{transition: .5s;
+   position: absolute;
+right: 25rem;
+top: 8rem;
+height: 3rem;
+width: 18rem;
+}
+#city{
+    text-align: center;
+
+  transition: .5s;
+     position: absolute;
+right: 25rem;
+top: 12rem;
+border-radius: 30px;
+width: 18rem;height: 2rem;
+}
+#city:hover{
+  scale: 1.2;
+}
+.lnb{
+  transition: .5s;
+       position: absolute;
+right: 25rem;
+top: 16rem;
+border-radius: 30px;
+width: 18rem;
+height: 3rem;}
+#message
+{
+        position: absolute;
+right: 25rem;
+top: 19.6rem;
+border-radius: 30px;
+width: 18rem;transition: .5s;
+height: 2rem;}
+
+#bfs{
+  transition: .5s;
+      position: absolute;
+      color: aliceblue;
+background-image: linear-gradient(to left, rgb(31, 84, 209),black);
+      right: 25rem;
+top: 24.1rem;
+padding: 20px;
+border-radius: 30px;
+width: 18rem;
+}
+#bfs:hover{
+  scale: 1.2;
+  background-color: rgb(42, 42, 78);
+}
+#getLocationiq:hover{
+    background-color: rgb(42, 42, 78);
+}
+
+/**/
+@media screen and (max-width: 985px) {
+  input{
+  border: solid 1px black;
+border-radius: 30px;
+text-align: center;
+transition: .5s;
+}
+input:hover{
+scale: 1.1;
+transition: .5s;}
+
+
+.line{position: absolute;
+  background: black;
+  height: 100vh;
+  width: 5px;
+  right: 70%;
+ z-index: 1212;
+ overflow:hidden;
+
+}
+
+#name{transition: .5s;
+  position: absolute;
+width: 14.4rem;
+right: 15rem;
+height: 2rem;
+
+}
+#phone{  position: absolute;
+right: 15rem;
+width: 14.4rem;
+height: 2rem;
+top: 4rem;
+transition: .5s;
+}
+
+#selectedProduct{ 
+
+  position: absolute;
+left: 2rem;
+top: 4.3rem;
+width: 12rem;
+border: none;
+height: -3rem;
+background-image: linear-gradient(to top, rgb(255, 255, 255),rgb(255, 255, 255));
+outline: none;
+
+transition: .5s;}
+#total{ position: absolute;
+  transition: .5s;
+left: 1rem;
+top: 15rem;
+width: 15rem;
+height: 3rem;
+border: none;
+outline: none;
+cursor:unset;
+text-align:unset;
+}
+#getLocationiq{
+  background-image: linear-gradient(to left, rgb(31, 84, 209),black);
+transition: .5s;
+   position: absolute;
+right: 14.8rem;
+top:-5.4rem;
+width: 15rem;
+border: none;
+height: 3rem;
+border-radius: 30px;
+cursor: pointxer;
+color: aliceblue;
+}
+#location
+{transition: .5s;
+   position: absolute;
+right: 15rem;
+top: 8rem;
+height: 3rem;
+width: 14.4rem;
+}
+#city{
+    text-align: center;
+
+  transition: .5s;
+     position: absolute;
+right: 15rem;
+top: 13rem;
+border-radius: 30px;
+width: 14.4rem;height: 2rem;
+}
+#city:hover{
+  scale: 1.1;
+}
+.lnb{transition: .5s;
+       position: absolute;
+right: 15rem;
+top: 16.4rem;
+border-radius: 10px;
+width: 14.4rem;}
+#message
+{
+        position: absolute;
+right: 15rem;
+top: 19.3rem;
+border-radius: 30px;
+width: 14.4rem;transition: .5s;
+height: 3rem;}
+
+#bfs{
+  transition: .5s;
+      position: absolute;
+      color: aliceblue;
+background-image: linear-gradient(to left, rgb(31, 84, 209),black);
+      right: 16.5rem;
+top: 24.1rem;
+padding: 20px;
+border-radius: 30px;
+width: 11rem;
+}
+#bfs:hover{
+  background-color: rgb(42, 42, 78);
+}
+#getLocationiq:hover{
+    background-color: rgb(42, 42, 78);
+}
+}
+
+
+
+
+
+@media screen and (max-width: 760px){
+input{
+  border: solid 1px black;
+  border-radius: 80px;
+text-align: center;
+transition: .5s;
+}
+input:hover{
+scale: 1.04;
+transition: .5s;}
+.line{position: absolute;
+  background: black;
+  height: 100vh;
+  width: 5px;
+  right: 70%;
+ z-index: 1212;
+ transition: .5s;
+}
+
+#name{
+  position: absolute;
+right: 8rem;
+width: 10.3rem;
+transition: .5s;
+}
+#phone{  position: absolute;
+right: 8rem;
+top: 3rem;
+width: 10.3rem;
+transition: .5s;}
+
+#selectedProduct{ 
+  overflow:scroll;
+
+   position: absolute;
+left: 1rem;
+top: 4.3rem;
+width: 7rem;
+border: none;
+height: 3rem;
+background-image: linear-gradient(to top, rgb(255, 255, 255),rgb(255, 255, 255));
+cursor:w-resize;
+outline: none;
+transition: .5s;
+}
+#total{ 
+  border-radius: 40px;
+
+  position: absolute;
+left: 1rem;
+top: 8.3rem;
+width: 7rem;
+height: 3rem;
+border: none;
+outline: none;
+cursor:unset;
+text-align:unset;
+transition: .5s;
+}
+#getLocationiq{border-radius: 40px;
+
+  background-image: linear-gradient(to left, rgb(31, 84, 209),black);
+transition: .5s;
+   position: absolute;
+right: 8rem;
+top:-5.4rem;
+width: 10rem;
+border: none;
+cursor: pointer;
+color: aliceblue;
+}
+#location
+{transition: .5s;
+   position: absolute;
+right: 8rem;
+top: 5.4rem;
+width: 10.3rem;
+border-radius: 40px;
+
+}
+#city{
+  text-align: center;
+     position: absolute;
+right: 8rem;
+top: 9rem;
+border-radius: 40px;
+width: 10.2rem;
+transition: .5s;}
+.lnb{transition: .5s;
+       position: absolute;
+right: 8rem;
+top: 12rem;
+border-radius: 40px;
+width: 10.2rem;
+}
+#message
+{      position: absolute;
+  transition: .5s;
+right: 8rem;
+top: 15.1rem;
+border-radius: 40px;
+width: 10.2rem;
+}
+
+#bfs{transition: .5s;
+      position: absolute;
+      color: aliceblue;
+background-image: linear-gradient(to left, rgb(31, 84, 209),black);
+      right: 8rem;
+top: 19.1rem;
+padding: 20px;
+border-radius: 30px;
+width: 10.2rem;
+}
+#bfs:hover{
+  background-color: rgb(42, 42, 78);
+}
+#getLocationiq:hover{
+    background-color: rgb(42, 42, 78);
+}}
+  </style>
+  <div class="line"></div>
+<h3>woodcenter</h3>
+<div id="contact-wrapper" class="contact-wrapper">
+    <form id="telegramForm" class="contact-form">
+ 
+    <input type="text" id="name" minlength="6" placeholder="أسمك " required>
+    <input type="tel" id="phone" minlength="10" max="11" placeholder="رقمك +964" required>
+
+    <input type="text" id="selectedProduct" placeholder="المنتجات" readonly required style="background-color: #f0f0f0;">
+    <input type="text" id="total" placeholder="السعر الإجمالي" readonly>
+
+    <div class="small">
+      <button type="button" id="getLocationiq" onclick="getLocation()"> اضغط للمساعدة في اختيار الموقع </button>
+      <input type="text" id="location" placeholder="موقعك" required>
+
+      <select id="city" name="choices" title="Select your city">
+        <option value="Baghdad">Baghdad</option>
+        <option value="Basra">Basra</option>
+        <option value="Mosul">Mosul</option>
+        <option value="Erbil">Erbil</option>
+        <option value="Sulaymaniyah">Sulaymaniyah</option>
+        <option value="Najaf">Najaf</option>
+        <option value="Karbala">Karbala</option>
+        <option value="Babylon">Babylon</option>
+        <option value="Diyala">Diyala</option>
+        <option value="Anbar">Anbar</option>
+        <option value="Kirkuk">Kirkuk</option>
+        <option value="Dhi Qar">Dhi Qar</option>
+        <option value="Wasit">Wasit</option>
+        <option value="Muthanna">Muthanna</option>
+        <option value="Maysan">Maysan</option>
+        <option value="Salah Al-Din">Salah Al-Din</option>
+        <option value="Diwaniyah">Diwaniyah</option>
+        <option value="Tal Afar">Tal Afar</option>
+        <option value="Sinjar">Sinjar</option>
+        <option value="Ramadi">Ramadi</option>
+        <option value="Hillah">Hillah</option>
+        <option value="Amarah">Amarah</option>
+        <option value="Samarra">Samarra</option>
+        <option value="Tikrit">Tikrit</option>
+      </select>
+      <input type="text" class="lnb" style="font-size: 1rem; color: black;" id="locationpoint" placeholder="أقرب نقطة لك" title="أقرب نقطة معروفة لموقعك" name="locationpoint"  title="Please enter a valid location point with at least 3 characters. Only letters, numbers, spaces, and hyphens are allowed." required>
+      <input type="text" id="message" placeholder="ملاحظات">
+    </div>
+
+    <button id="bfs" type="submit">إرسال الطلب</button>
+
+    <div id="in-box" class="in-box">
+    
+      <div id="productList">
+        <ul id="productSummaryList">
+          </ul>
+      </div>
+    </div>
+
+    <p id="statusMessage"></p>
+  </form>
+</div>
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const selectedProduct = localStorage.getItem("selectedProduct");
+    const totalPrice = localStorage.getItem("totalPrice");
+
+    if (selectedProduct) {
+      document.getElementById("selectedProduct").value = selectedProduct;
+    }
+
+    if (totalPrice) {
+      document.getElementById("total").value = totalPrice;
+      document.getElementById("Howmany").value = totalPrice;
+    }
+  });
+</script>
+
+<script src="js.js"></script>
+</body>
+</html>

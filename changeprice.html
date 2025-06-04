@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control-price</title>
+</head>
+<body>
+<h3>change the price</h3>
+<select  id="editProduct">
+<option value="a1">a1</option>
+<option value="a2">a2</option>
+<option value="a3">a3</option>
+<option value="a4">a4</option>
+<option value="a5">a5</option>
+<option value="a6">a6</option>
+<option value="a7">a7</option>
+<option value="a8">a8</option>
+<option value="a9">a9</option>
+</select>
+<div class="current-price">new price : <span id="currentPrice">0</span>$</div>
+
+<input type="number" id="editPrice" placeholder=" change price">
+<button onclick="saveNewPrice()">load</button>
+
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    </style>
+
+<script>
+    
+
+document.addEventListener('DOMContentLoaded', function() {
+   updateCurrentPriceDisplay()
+   
+    document.getElementById('editProduct').addEventListener('change',function(){
+updateCurrentPriceDisplay()
+    });
+});
+  // عرض السعر الحالي للمنتج المحدد
+function updateCurrentPriceDisplay(){
+    const productId = document.getElementById('editProduct').value
+    const currentPrice = localStorage.getItem('price_' + productId) || 500;
+
+document.getElementById('currentPrice').textContent = currentPrice;
+}
+function saveNewPrice() {
+const productId = document.getElementById('editProduct').value;
+const newPrice = document.getElementById('editPrice').value;
+if (!newPrice || isNaN(newPrice)){
+    alert('Please enter a valid price.');
+    return;
+}
+localStorage.setItem('price_' + productId, newPrice);
+updateCurrentPriceDisplay();
+document.getElementById('editPrice').value = '';
+alert('Price updated successfully!');
+
+}
+
+
+
+</script>
+<script src="js.js"></script>
+</body>
+</html>
